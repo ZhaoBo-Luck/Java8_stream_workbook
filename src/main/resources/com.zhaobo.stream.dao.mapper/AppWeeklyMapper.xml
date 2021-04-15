@@ -1,0 +1,24 @@
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhaobo.stream.dao.mapper.AppWeeklyMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.zhaobo.stream.dao.entity.AppWeekly">
+        <id column="id" property="id" />
+        <result column="machine_id" property="machineId" />
+        <result column="machine_name" property="machineName" />
+        <result column="config_id" property="configId" />
+        <result column="config_name" property="configName" />
+        <result column="category" property="category" />
+        <result column="cum_plan" property="cumPlan" />
+        <result column="cum_actual" property="cumActual" />
+        <result column="status" property="status" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, machine_id, machine_name, config_id, config_name, category, cum_plan, cum_actual, status, create_time, update_time
+    </sql>
+</mapper>
