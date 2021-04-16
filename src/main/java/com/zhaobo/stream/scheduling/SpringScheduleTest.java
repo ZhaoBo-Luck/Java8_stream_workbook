@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  * Date: 2021/4/13 - 上午11:50
  * </p>
  */
-@Component
+//@Component
 public class SpringScheduleTest {
 
 

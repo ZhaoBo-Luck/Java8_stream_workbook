@@ -1,5 +1,6 @@
 package com.zhaobo.stream.interceptors;
 
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -16,14 +17,19 @@ import java.util.Enumeration;
  * Date: 2021/4/13 - 下午4:03
  * </p>
  */
+@Component
 public class InterceptorCustomTest1 implements HandlerInterceptor {
 
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
-
-        return false;
+        Enumeration<String> headerNames = request.getHeaderNames();
+        while (headerNames.hasMoreElements()) {
+            String element = headerNames.nextElement();
+            System.out.println(element);
+        }
+        return true;
     }
 
     @Override
