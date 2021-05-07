@@ -7,12 +7,8 @@ import com.lmax.disruptor.dsl.ProducerType;
 import com.zhaobo.stream.disruptor.event.LongEvent;
 import com.zhaobo.stream.disruptor.factory.LongEventFactory;
 import com.zhaobo.stream.disruptor.handler.LongEventHandler;
-import net.bytebuddy.utility.RandomString;
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Component;
 
-import java.util.Random;
-import java.util.UUID;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -25,7 +21,7 @@ import java.util.concurrent.Executors;
  * Date: 2021/4/15 - 下午6:25
  * </p>
  */
-@Component
+//@Component
 public class EventPublishSchedule {
 
     @Scheduled(cron = "*/10 * * * * ?")
